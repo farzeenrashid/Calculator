@@ -4,8 +4,29 @@
 
 body {
     background-image: url("./images/Wood-Table.jpg");
-    background-repeat: no-repeat;
     display: flex;
     justify-content:center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.notebook {
+    transform: scale(0.42) translateX(45%) translateY(-13%);
+    position: absolute;
+}
+
+.paper {
+    transform: scale(1.1) translateX(-100%) translateY(8%) rotate(5deg);
+    position: relative;
+}
+
+.sticky-note-2 {
+    transform: scale(0.6) translateX(-130%) translateY(80%);
+    position: absolute;
+}
+
+.coffee {
+    transform: scale(0.7) translateX(180%) translateY(55%) rotate(78deg);
+    position: absolute;
 }
