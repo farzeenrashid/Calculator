@@ -11,12 +11,6 @@ body {
     overflow: hidden;
 }
 
-.notebook {
-    transform: scale(0.42) translateX(45%) translateY(-13%);
-    position: absolute;
-    z-index: 1;
-}
-
 .paper {
     transform: scale(1.1) translateX(-100%) translateY(8%) rotate(5deg);
     position: relative;
@@ -27,20 +21,37 @@ body {
     position: absolute;
 }
 
-.sticky-note-1 {
-    transform: scale(0.52) translateX(180%) translateY(-63%);
+.eraser {
+    transform: scale(0.2) translateX(-420%) translateY(-350%) rotateY(180deg) rotate(5deg);
     position: absolute;
-    z-index: 2;
+}
+
+.notebook {
+    transform: scale(0.45) translateX(45%) translateY(-9%);
+    position: absolute;
+}
+
+.sticky-note-1 {
+    transform: scale(0.52) translateX(192%) translateY(-63%);
+    position: absolute;
 }
 
 .earbuds {
-    transform: scale(0.45) translateX(277%) translateY(13%) rotate(-50deg);
+    transform: scale(0.45) translateX(296%) translateY(11%) rotate(-50deg);
     position: absolute;
-    z-index: 2;
 }
 
 .coffee {
     transform: scale(0.7) translateX(180%) translateY(55%) rotate(78deg);
     position: absolute;
-    z-index: 2;
+}
+
+.pencil {
+    transform: scale(0.3) translateX(-1120%) translateY(10%) rotate(-7deg);
+    position: absolute;
+}
+
+.pen {
+    transform: scale(0.3) translateX(210%) translateY(-70%) rotate(85deg);
+    position: absolute;
 }
