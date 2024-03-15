@@ -9,6 +9,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
+    height: 85vh;
 }
 
 .paper {
@@ -77,12 +78,16 @@ body {
     border-top: 5px solid #6A6C69;
 }
 
-#black-container p {
+#black-container a {
     font-size: 15px;
     position: absolute;
     color: #BFBEBA;
     transform: translateX(15%) translateY(-40%);
     font-family: 'Schibsted Grotesk', sans-serif;
+}
+
+#black-container a:hover {
+    color: white;
 }
 
 #grey-container {
@@ -91,16 +96,16 @@ body {
     height: 110px;
     background-color: #C1C3C0;
     border-radius: 5px;
-    transform: translateX(5%) translateY(30%);
+    transform: translateX(5%) translateY(17%);
     border: 1px solid #4C482B;
 }
 
 #green-container {
     position: absolute;
     width: 340px;
-    height: 95px;
+    height: 93px;
     background-color:#777658;
     border-radius: 5px;
-    transform: translateX(7%) translateY(6%);
+    transform: translateX(7%) translateY(7%);
     border: 1px solid #535135;
 }
