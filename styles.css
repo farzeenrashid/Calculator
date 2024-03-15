@@ -77,6 +77,14 @@ body {
     border-top: 5px solid #6A6C69;
 }
 
+#black-container p {
+    font-size: 15px;
+    position: absolute;
+    color: #BFBEBA;
+    transform: translateX(15%) translateY(-40%);
+    font-family: 'Schibsted Grotesk', sans-serif;
+}
+
 #grey-container {
     position: absolute;
     width: 390px;
