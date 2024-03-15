@@ -9,6 +9,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
+    height: 70vh;
     margin-top: 45px;
 }
 
