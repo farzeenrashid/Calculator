@@ -103,11 +103,15 @@ body {
 #green-container {
     position: absolute;
     width: 340px;
-    height: 93px;
+    height: 74.5px;
     background-color:#777658;
     border-radius: 5px;
     transform: translateX(7%) translateY(7%);
     border: 1px solid #535135;
+    text-align: end;
+    padding: 20px 5px 0px 0px;
+    font-family: 'Digital-7', sans-serif;
+    font-size: 70px;
 }
 
 #buttons {

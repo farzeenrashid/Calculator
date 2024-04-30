@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    let number = 0;
     let countx = 7;
     let county = 4;
     let countz = 1;
@@ -38,5 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+    const screen = document.getElementById("green-container");
+    screen.textContent = number;
 });
 
