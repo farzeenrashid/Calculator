@@ -9,8 +9,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
-    height: 70vh;
-    margin-top: 45px;
+    margin-top: 10px;
 }
 
 .paper {
@@ -110,3 +109,21 @@ body {
     transform: translateX(7%) translateY(7%);
     border: 1px solid #535135;
 }
+
+#buttons {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 10px;
+    transform: translateX(7%) translateY(62%);
+}
+
+.cell {
+    border: 1px solid #010101; 
+    border-radius: 10px;
+    background-color: #40423F;
+    width: 85px;
+    height: 75px;
+}
+
