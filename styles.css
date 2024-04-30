@@ -131,3 +131,8 @@ body {
     color: #C9CFCD;
     cursor: pointer;
 }
+
+.cell:active {
+    box-shadow: 0 0 0;
+    transform: translateY(4px);
+}
