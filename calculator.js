@@ -24,22 +24,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             if (i == 0 && j == 3) { 
                 cell.textContent = "÷";
-                cellValue = "/";
+                cellValue = " / ";
                 cell.style.backgroundColor = "#4d84ab"; 
             }
             if (i == 1 && j == 3) { 
                 cell.textContent = "×"; 
-                cellValue = "*";
+                cellValue = " * ";
                 cell.style.backgroundColor = "#4d84ab"; 
             }
             if (i == 2 && j == 3) {
                 cell.textContent = "-"; 
-                cellValue = "-";
+                cellValue = " - ";
                 cell.style.backgroundColor = "#4d84ab"; 
             }
             if (i == 3 && j == 3) { 
                 cell.textContent = "+"; 
-                cellValue = "+";
+                cellValue = " + ";
                 cell.style.backgroundColor = "#4d84ab"; 
             }
             cell.setAttribute("data-value", cellValue);
