@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
         else if (event.code === 'Minus') {
             screen.textContent += " - ";
         }
-        else if (event.code === 'Digit8' && event.shiftKey) {
+        else if (event.code === ('Digit8' && event.shiftKey) || event.code === 'KeyX') {
             screen.textContent += " * ";
         }
     });
