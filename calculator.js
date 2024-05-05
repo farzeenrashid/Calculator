@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function calculate() {
         const expression = screen.textContent;
         const result = eval(expression);
-        screen.style.animation = "disappear 0.5s forwards";
         screen.textContent = result;
         if (result.toString().length > 9) {
             screen.textContent = result.toExponential(2);
@@ -60,7 +59,12 @@ document.addEventListener('DOMContentLoaded', function() {
     cells.forEach(cell => {
         cell.addEventListener("click", function() {
             const cellValue = cell.getAttribute("data-value");
-            if (cellValue === "=") { calculate(); }
+            if (cellValue === "=") { 
+                screen.style.animation = "none"; 
+                void screen.offsetWidth;
+                screen.style.animation = "disappear 0.5s ease"; 
+                calculate(); 
+            }
             else { screen.textContent += cellValue; }
         });
     });
