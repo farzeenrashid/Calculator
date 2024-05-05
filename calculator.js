@@ -51,22 +51,22 @@ document.addEventListener('DOMContentLoaded', function() {
     function calculate() {
         const expression = screen.textContent;
         const result = eval(expression);
+        screen.style.animation = "disappear 0.3s forwards";
         screen.textContent = result;
+        if (result.toString().length > 9) {
+            screen.textContent = result.toExponential(2);
+        }
     }
     cells.forEach(cell => {
         cell.addEventListener("click", function() {
             const cellValue = cell.getAttribute("data-value");
             if (cellValue === "=") { calculate(); }
-            else { 
-                screen.textContent += cellValue 
-            }
+            else { screen.textContent += cellValue; }
         });
     });
 });
 
-// make 0 go away when click on any button
 // slight pause before revealing answer (it goes blank for half a second)
-// equation at top left, small grey font when click equal
 // press space bar to backspace
 // double press space bar to clear
 // can also use numbers & symbols on keyboard to type equation & get answer
