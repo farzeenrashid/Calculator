@@ -49,6 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const screen = document.getElementById("green-container");
     screen.textContent = "";
     function calculate() {
+        screen.style.animation = "none"; 
+        void screen.offsetWidth;
+        screen.style.animation = "disappear 0.5s ease"; 
         const expression = screen.textContent;
         const result = eval(expression);
         screen.textContent = result;
@@ -60,18 +63,62 @@ document.addEventListener('DOMContentLoaded', function() {
         cell.addEventListener("click", function() {
             const cellValue = cell.getAttribute("data-value");
             if (cellValue === "=") { 
-                screen.style.animation = "none"; 
-                void screen.offsetWidth;
-                screen.style.animation = "disappear 0.5s ease"; 
                 calculate(); 
             }
             else { screen.textContent += cellValue; }
         });
     });
+    document.addEventListener('keydown', function(event) {
+        if (event.code === 'Space') {
+            screen.textContent = "";
+        }
+        else if (event.code === 'Backspace') {
+            screen.textContent = screen.textContent.slice(0, -1);
+        }
+        else if (event.code === 'Digit1') {
+            screen.textContent += "1";
+        }
+        else if (event.code === 'Digit2') {
+            screen.textContent += "2";
+        }
+        else if (event.code === 'Digit3') {
+            screen.textContent += "3";
+        }
+        else if (event.code === 'Digit4') {
+            screen.textContent += "4";
+        }
+        else if (event.code === 'Digit5') {
+            screen.textContent += "5";
+        }
+        else if (event.code === 'Digit6') {
+            screen.textContent += "6";
+        }
+        else if (event.code === 'Digit9') {
+            screen.textContent += "9";
+        }
+        else if (event.code === 'Digit0') {
+            screen.textContent += "0";
+        }
+        else if (event.code === 'Digit1') {
+            screen.textContent += "1";
+        }
+        else if (event.code === 'Equal' && event.shiftKey) {
+            screen.textContent += " + ";
+        }
+        else if (event.code === 'Equal' || event.code === 'Enter') {
+            calculate();
+        }
+        else if (event.code === 'Slash') {
+            screen.textContent += " / ";
+        }
+        else if (event.code === 'Period') {
+            screen.textContent += ".";
+        }
+        else if (event.code === 'Minus') {
+            screen.textContent += " - ";
+        }
+        else if (event.code === 'Digit8' && event.shiftKey) {
+            screen.textContent += " * ";
+        }
+    });
 });
-
-// slight pause before revealing answer (it goes blank for half a second)
-// press space bar to backspace
-// double press space bar to clear
-// can also use numbers & symbols on keyboard to type equation & get answer
-// when press 5 on keyboard, 5 button on screen presses down
