@@ -53,23 +53,27 @@ document.addEventListener('DOMContentLoaded', function() {
         void screen.offsetWidth;
         screen.style.animation = "disappear 0.5s ease"; 
         const expression = screen.textContent;
-        const result = eval(expression);
-        screen.textContent = result;
-        if (result.toString().length > 9) {
-            screen.textContent = result.toExponential(2);
+        try {
+            const result = eval(expression);
+            screen.textContent = result.toString().length > 9 ? result.toExponential(2) : result;
+        } catch (error) {
+            screen.textContent = "Error";
         }
     }
     cells.forEach(cell => {
         cell.addEventListener("click", function() {
             const cellValue = cell.getAttribute("data-value");
             if (cellValue === "=") { 
-                calculate(); 
+                calculate();
             }
             else { screen.textContent += cellValue; }
         });
     });
     document.addEventListener('keydown', function(event) {
-        if (event.code === 'Space') {
+        if (event.shiftKey && event.code === 'Digit8') {
+            screen.textContent += " * ";
+        } 
+        else if (event.code === 'Space') {
             screen.textContent = "";
         }
         else if (event.code === 'Backspace') {
@@ -93,14 +97,17 @@ document.addEventListener('DOMContentLoaded', function() {
         else if (event.code === 'Digit6') {
             screen.textContent += "6";
         }
+        else if (event.code === 'Digit7') {
+            screen.textContent += "7";
+        }
+        else if (event.code === 'Digit8') {
+            screen.textContent += "8";
+        }
         else if (event.code === 'Digit9') {
             screen.textContent += "9";
         }
         else if (event.code === 'Digit0') {
             screen.textContent += "0";
-        }
-        else if (event.code === 'Digit1') {
-            screen.textContent += "1";
         }
         else if (event.code === 'Equal' && event.shiftKey) {
             screen.textContent += " + ";
@@ -117,8 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
         else if (event.code === 'Minus') {
             screen.textContent += " - ";
         }
-        else if (event.code === ('Digit8' && event.shiftKey) || event.code === 'KeyX') {
+        else if (event.code === 'KeyX') {
             screen.textContent += " * ";
-        }
+        }       
     });
 });
